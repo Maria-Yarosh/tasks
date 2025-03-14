@@ -47,3 +47,33 @@ const orders = [
 ]
 const expensiveOrders = orders.filter((order) => order.total > 200)
 const strOrdesr = expensiveOrders.map((item) => `Покупатель: ${item.customer}, сумма: ${item.total}`)
+
+// 6
+const books = [
+    { title: "1984", author: "George Orwell" },
+    { title: "To Kill a Mockingbird", author: "Harper Lee" },
+    { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+  ];
+  
+  const newBooks = books.map((book) => {
+    return {
+      name: book.title + book.author,
+    };
+  });
+  console.log(newBooks);
+
+  //7
+  const people = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 },
+  ];
+  
+  const olderPeople = people.map((elem) => ({ ...elem, age: elem.age + 1 }));
+  console.log(olderPeople);
+  
+  const other = people.map((person) => ({
+    ...person,
+    name: person.name + "new",
+  }));
+  console.log(other);
