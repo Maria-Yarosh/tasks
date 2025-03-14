@@ -77,3 +77,12 @@ const books = [
     name: person.name + "new",
   }));
   console.log(other);
+
+//8
+const names = ["Ivan Ivanov", "Maria Petrova", "Petr Sidorov"];
+
+const fuulNames = names.map((name) => {
+  const [firstName, lastName] = name.split(" ");
+  return { firstName, lastName };
+});
+console.log(fuulNames);
