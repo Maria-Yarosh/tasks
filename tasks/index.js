@@ -189,3 +189,24 @@ for (let i = 0; i < arr.length; i++) {
   console.log(arr[i])
   
 }
+ //11
+const convertTemperature = (temp, measure) => {
+  let convert;
+  switch (measure) {
+    case "C":
+      convert = (temp * 9) / 5 + 32;
+      break;
+
+    case "F":
+      convert = ((temp - 32) * 5) / 9;
+      break
+
+    default:
+      return console.log("вы ввели не C или F");
+      break;
+  }
+  return console.log(convert);
+};
+
+convertTemperature(25, "C") //77;
+convertTemperature(77, "F") //25
