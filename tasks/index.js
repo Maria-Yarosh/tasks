@@ -210,3 +210,13 @@ const convertTemperature = (temp, measure) => {
 
 convertTemperature(25, "C") //77;
 convertTemperature(77, "F") //25
+
+//12
+const isPalindrome = (str) => {
+  if (str.toString().split("").reverse().join("") === str.toString()) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(isPalindrome("vbv"))
