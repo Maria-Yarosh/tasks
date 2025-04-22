@@ -124,3 +124,17 @@ for (let i = 0; i < arr10.length; i++) {
     sumArr1[i] = arr10[i] + arr101[i]
 }
 console.log(sumArr1)
+
+//11
+const dateArr = [
+  { date: "2001-aug-15" },
+  { date: "1999-nov-07" },
+  { date: "2020-dec-30" },
+];
+const getNewFormatDate = (arr) => {
+  return arr.map((obj) => {
+    const [year, mon, day] = obj.date.split("-");
+    return `${day}/${mon}/${year}`;
+  });
+};
+console.log(getNewFormatDate(dateArr))
