@@ -151,3 +151,9 @@ const getUpperPrice = (arr) => {
   return arr.map((obj) => ({ ...obj, price: obj.price * 1.1 }));
 };
 console.log(getUpperPrice(priceArr));
+
+//13
+const arrayStr = ["ggg", "yyy", "ooo"]
+consr getObjStr = (arr) => {
+  return arr.map((item) => ({ text: item }))
+}
