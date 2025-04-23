@@ -138,3 +138,16 @@ const getNewFormatDate = (arr) => {
   });
 };
 console.log(getNewFormatDate(dateArr))
+
+//12
+const priceArr = [
+  { price: 10 },
+  { item: "chair", price: 5 },
+  { price: 30 },
+  { item: "sofa", price: 100 },
+  { item: "tv", price: 1000 },
+];
+const getUpperPrice = (arr) => {
+  return arr.map((obj) => ({ ...obj, price: obj.price * 1.1 }));
+};
+console.log(getUpperPrice(priceArr));
