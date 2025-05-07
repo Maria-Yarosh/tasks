@@ -157,3 +157,36 @@ const arrayStr = ["ggg", "yyy", "ooo"]
 consr getObjStr = (arr) => {
   return arr.map((item) => ({ text: item }))
 }
+
+//14
+const users = [
+  { name: "Alice", isActive: true },
+  { name: "Bob", isActive: false },
+  { name: "Charlie", isActive: true },
+];
+
+function filterActiveUsers(arr) {
+  const fil = arr.filter((user) => {
+    return user.isActive;
+  });
+  return fil;
+}
+//console.log(filterActiveUsers(users));
+
+//15
+function filterByRange(numbers, min, max) {
+  const fil = numbers.filter((num) => {
+   return num >= min && num <= max;
+  });
+  return fil
+}
+//console.log(filterByRange([1, 5, 10, 15, 20], 5, 15));
+
+//16 уникальные значения
+function filterUniqueValues(array) {
+  const fil = array.filter((num, index, arr) => {
+    return arr.indexOf(num) === index;
+  });
+  return fil
+}
+//console.log(filterUniqueValues([1, 2, 2, 3, 4, 4, 5]));
