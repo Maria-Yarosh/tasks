@@ -190,3 +190,12 @@ function filterUniqueValues(array) {
   return fil
 }
 //console.log(filterUniqueValues([1, 2, 2, 3, 4, 4, 5]));
+
+//17
+const findMaxNum = (array) => {
+  const max = array.reduce((max, cur) => {
+    return Math.max(max, cur);
+  }, -Infinity);
+  return max;
+};
+//console.log(findMaxNum([1, 5, 8, 90]));
