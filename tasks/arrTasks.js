@@ -199,3 +199,32 @@ const findMaxNum = (array) => {
   return max;
 };
 //console.log(findMaxNum([1, 5, 8, 90]));
+
+//18
+const tree = {
+  value: "A",
+  children: [
+    {
+      value: "B",
+      children: [
+        { value: "D", children: [{ value: "O", children: [] }] },
+        { value: "E", children: [] },
+      ],
+    },
+    { value: "C", children: [{ value: "F", children: [] }] },
+  ],
+};
+function getValueInTree(tree) {
+  if (!tree) {
+    return null;
+  }
+  console.log(tree.value);
+  //tree.children.forEach((element) => {
+  //getValueInTree(element);
+  //});
+
+  for (const child of tree.children) {
+    getValueInTree(child);
+  }
+}
+//console.log(getValueInTree(tree));
